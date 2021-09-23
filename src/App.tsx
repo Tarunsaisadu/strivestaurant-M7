@@ -12,8 +12,8 @@ function App() {
       <Router>
         <MyNav title="Strivestaurant" />
         <Route exact path="/" render={(routerProps) => <Home {...routerProps} title="Strivestaurant" />} />
-        <Route path="/reservations" component={Reservations} />
-        <Route path="/menu" component={Menu} />
+        {/* <Route path="/reservations" component={Reservations} />
+        <Route path="/menu" component={Menu} /> */}
       </Router>
     </div>
   )

@@ -4,7 +4,18 @@ import { useState } from 'react'
 import DishComments from './DishComments'
 import upperName from '../helpers/lib'
 
-const Home = ({ title }) => {
+interface HomecomponentProps{
+  title: string
+}
+
+interface dishes {
+  name: string
+  description: string
+
+  id: number
+}
+
+const Home = ({ title }: HomecomponentProps) => {
   const [selected, setSelected] = useState(null)
 
   return (
@@ -14,7 +25,7 @@ const Home = ({ title }) => {
           <h1>Welcome to {upperName(title)}!</h1>
           <h3 className="text-center mb-4">We can only cook pasta...</h3>
           <Carousel>
-            {dishes.map((dish, i) => (
+            {dishes.map((dish : any, i) => (
               <Carousel.Item
                 key={dish.id}
                 onClick={() => {
